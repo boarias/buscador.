@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boarias Viagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Boarias Viagens</h1>
+  </header>
+  <main>
+    <form id="searchForm">
+      <div class="row">
+        <label>Origem (IATA): 
+          <input name="origin" list="iataCodes" required maxlength="3">
+        </label>
+        <label>Destino (IATA): 
+          <input name="destination" list="iataCodes" required maxlength="3">
+        </label>
+        <datalist id="iataCodes">
+          <option value="GRU"><option value="GIG"><option value="CGH">
+          <option value="LIS"><option value="JFK"><option value="MIA">
+        </datalist>
+      </div>
+      <div class="row">
+        <label>Data ida: <input name="departDate" type="date" required></label>
+        <label>Data volta: <input name="returnDate" type="date"></label>
+      </div>
+      <div class="row">
+        <label>Adultos: <input name="adults" type="number" min="1" value="1" required></label>
+        <label>Crianças: <input name="children" type="number" min="0" value="0"></label>
+        <label>Bebês: <input name="infants" type="number" min="0" value="0"></label>
+      </div>
+      <div class="buttons">
+        <button type="button" id="moneyBtn">Buscar em dinheiro</button>
+        <button type="button" id="milesBtn">Buscar com milhas</button>
+      </div>
+    </form>
+    <section id="linksSection"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
